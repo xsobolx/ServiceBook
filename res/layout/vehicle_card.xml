@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/vehicle_info"
+              android:id="@+id/textView" android:layout_gravity="center_horizontal"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vehicle_info"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:weightSum="1">
+        <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lastMaintenanceInfo" android:layout_weight="2.50"/>
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lastRepairInfo" android:layout_weight="2.07"/>
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spendingInfo" android:layout_weight="0.06"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/all_maintenance"
+                android:id="@+id/btn_all_maintenance" android:clickable="true"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/all_repairs"
+                android:id="@+id/btn_all_repairs" android:clickable="true"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/spending"
+                android:id="@+id/btn_spending" android:clickable="true"/>
+    </LinearLayout>
+</LinearLayout>

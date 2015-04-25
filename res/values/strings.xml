@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Сервисная книга</string>
+    <string name="choose_vehicle">Выбор ТС</string>
+    <string name="sort_by">Сортировать по…</string>
+    <string name="vaz2106">ВАЗ-2106, 1989г.в., 120ткм</string>
+    <string name="add_auto">Добавить авто +</string>
+    <string name="vehicle_card">Карточка ТС</string>
+    <string name="vehicle_info">Краткая информация о ТС</string>
+    <string name="change_mileage">Добавить пробег</string>
+    <string name="last_maintenance">Дата последнего ТО</string>
+    <string name="last_repair">Дата последнего ремонта</string>
+    <string name="photo_description">Your vehicle photo</string>
+    <string name="all_maintenance">Список всех ТО</string>
+    <string name="all_repairs">Список всех ремонтов</string>
+    <string name="spending">Расходы</string>
+    <string name="maintenance_commentary_header">Комментарий</string>
+
+    <string-array name="sort_array">
+        <item>Пробегу</item>
+        <item>Году выпуска</item>
+        <item>Названию</item>
+    </string-array>
+
+    <string-array name="vehicle_info">
+        <item>Модель</item>
+        <item>Год выпуска</item>
+        <item>Пробег</item>
+        <item>Кузов</item>
+        <item>Двигатель</item>
+        <item>Цвет</item>
+    </string-array>
+
+    <string-array name="last_maintenance_info">
+        <item>Дата последнего ТО</item>
+        <item>25.02.1994г, 100000км</item>
+        <item>Следующий ТО через: 5687км</item>
+    </string-array>
+
+    <string-array name="last_repair_info">
+        <item>Последний ремонт</item>
+        <item>25.04.1994, 111000км \nЗамена диска сцепления</item>
+    </string-array>
+
+    <string-array name="main_spending">
+        <item>Основные затраты:</item>
+        <item>Топливо: 99000 руб.</item>
+        <item>Расходники: 5000 руб.</item>
+        <item>Ремонт: 5000 руб.</item>
+        <item>Итого: 109000 руб.</item>
+    </string-array>
+
+    <string-array name="all_maintenance">
+        <item>100000км, 25.04.1993</item>
+        <item>110000км, 25.04.1994</item>
+        <item>120000км, 25.04.1995</item>
+        <item>130000км, 25.04.1996</item>
+        <item>Добавить расходы + </item>
+    </string-array>
+
+    <string-array name="replace_list">
+        <item>Заменено</item>
+        <item>Масло - 500 руб.</item>
+        <item>Тормозные колодки передние - 400 руб.</item>
+        <item>Тормозные колодки задние - 400 руб.</item>
+        <item>Добавить +</item>
+        <item>Итого: 1300 руб.</item>
+    </string-array>
+
+    <string-array name="repairs_list">
+        <item>120000 км, 25.04.1992 \nЗамена КПП</item>
+        <item>123000 км, 36.05.1992 \nЗамена ТНВД</item>
+        <item>Добавить +</item>
+    </string-array>
+
+    <string-array name="repair_info">
+        <item>Дата проведения:</item>
+        <item>Пробег:</item>
+        <item>Место работ:</item>
+    </string-array>
+
+    <string-array name="repair_spending">
+        <item>Затраты</item>
+        <item>item</item>
+        <item>item</item>
+        <item>item</item>
+        <item>item</item>
+    </string-array>
+</resources>
