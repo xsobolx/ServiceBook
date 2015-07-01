@@ -15,6 +15,13 @@
     <string name="all_repairs">Список всех ремонтов</string>
     <string name="spending">Расходы</string>
     <string name="maintenance_commentary_header">Комментарий</string>
+    <string name="model">Модель</string>
+    <string name="graduation_year">Год выпуска</string>
+    <string name="mileage">Пробег</string>
+    <string name="color">Цвет</string>
+    <string name="body">Кузов</string>
+    <string name="engine">Двигатель</string>
+    <string name="save">Сохранить</string>
 
     <string-array name="sort_array">
         <item>Пробегу</item>

@@ -14,14 +14,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/sort_array"/>
-    <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button_vaz"
-            android:text="@string/vaz2106" android:clickable="true"/>
+    <ListView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/lvVehicles">
+
+    </ListView>
     <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button_add_uto"
+            android:id="@+id/button_add_vehicle"
             android:text="@string/add_auto"/>
 
 

@@ -17,5 +17,7 @@
         <activity android:name=".MaintenanceDetailed" android:label="Детальная информация ТО"/>
         <activity android:name=".AllRepairs" android:label="Список всех ремонтов"/>
         <activity android:name=".RepairDetailed" android:label="Детальная Информация Ремонта"/>
+        <activity android:name=".AddVehicle" android:label="Добавить ТС"/>
+        <activity android:name=".Spending" android:label="Затраты"/>
     </application>
 </manifest>

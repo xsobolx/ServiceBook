@@ -81,6 +81,7 @@ public class VehicleCard extends Activity implements View.OnClickListener {
                 break;
             case R.id.btn_all_repairs:
                 startActivity(new Intent(this, AllRepairs.class));
+                break;
             default:
                 break;
         }
