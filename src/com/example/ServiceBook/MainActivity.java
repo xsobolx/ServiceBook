@@ -35,7 +35,10 @@ public class MainActivity extends Activity implements OnClickListener{
         lvVehicles.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Intent intent = new Intent(getBaseContext(), VehicleCard.class);
+                Vehicle v = vehicleList.getVehicle(position);
+                intent.putExtra("KEY1", v);
+                startActivity(intent);
             }
         });
 

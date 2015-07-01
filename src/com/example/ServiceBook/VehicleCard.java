@@ -2,16 +2,9 @@ package com.example.ServiceBook;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListView;
-
-import java.util.List;
+import android.widget.*;
 
 /**
  * Created by admin on 23.04.2015.
@@ -20,6 +13,7 @@ public class VehicleCard extends Activity implements View.OnClickListener {
     Button btnGotoMaintenance;
     Button btnGotoRepairs;
     Button btnGotoSpending;
+    Vehicle vehicle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,39 +22,16 @@ public class VehicleCard extends Activity implements View.OnClickListener {
         setTitle(R.string.vehicle_card);
 
 
-//        TODO добавить фото ТС
+//        TODO РґРѕР±Р°РІРёС‚СЊ С„РѕС‚Рѕ РўРЎ
 //        ImageView imageView = (ImageView) findViewById(R.id.auto_photo);
 //        imageView.setImageResource(R.drawable.vazz2106);
 
-//        Краткая информация о ТС
-        ListView vehicleInfoList = (ListView) findViewById(R.id.vehicle_info);
-        final String[] vehicleInfo = getResources().getStringArray(R.array.vehicle_info);
-        ArrayAdapter<String> vehicleAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, vehicleInfo);
-        vehicleInfoList.setAdapter(vehicleAdapter);
+        Intent box = getIntent();
+        vehicle = (Vehicle) box.getSerializableExtra("KEY1");
 
-//        Информация о последнем ТО
-        ListView lastMaintenanceInfoList = (ListView) findViewById(R.id.lastMaintenanceInfo);
-        final String[] lastMaintenanceInfo = getResources().getStringArray(R.array.last_maintenance_info);
-        ArrayAdapter<String> lmAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, lastMaintenanceInfo);
-        lastMaintenanceInfoList.setAdapter(lmAdapter);
+        fillDate();
 
-        //        Иформация о последнем ремонте
-        ListView lastRepairInfoList = (ListView) findViewById(R.id.lastRepairInfo);
-        final String[] lastRepairInfo = getResources().getStringArray(R.array.last_repair_info);
-        ArrayAdapter<String> lrAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, lastRepairInfo);
-        lastRepairInfoList.setAdapter(lrAdapter);
-
-//        Информация о затратах
-        ListView spendingInfoList = (ListView) findViewById(R.id.spendingInfo);
-        final String[] spendingInfo = getResources().getStringArray(R.array.main_spending);
-        ArrayAdapter<String> spendingAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, spendingInfo);
-        spendingInfoList.setAdapter(spendingAdapter);
-
-//      Прослушка кнопок
+//      РџСЂРѕСЃР»СѓС€РєР° РєРЅРѕРїРѕРє
         btnGotoMaintenance = (Button) findViewById(R.id.btn_all_maintenance);
         btnGotoMaintenance.setOnClickListener(this);
 
@@ -85,5 +56,51 @@ public class VehicleCard extends Activity implements View.OnClickListener {
             default:
                 break;
         }
+    }
+
+
+
+    //    public void createView(){
+//        //        РљСЂР°С‚РєР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РўРЎ
+//        ListView vehicleInfoList = (ListView) findViewById(R.id.vehicle_info);
+//        final String[] vehicleInfo = getResources().getStringArray(R.array.vehicle_info);
+//        ArrayAdapter<String> vehicleAdapter = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_list_item_1, vehicleInfo);
+//        vehicleInfoList.setAdapter(vehicleAdapter);
+//
+////        РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РїРѕСЃР»РµРґРЅРµРј РўРћ
+//        ListView lastMaintenanceInfoList = (ListView) findViewById(R.id.lastMaintenanceInfo);
+//        final String[] lastMaintenanceInfo = getResources().getStringArray(R.array.last_maintenance_info);
+//        ArrayAdapter<String> lmAdapter = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_list_item_1, lastMaintenanceInfo);
+//        lastMaintenanceInfoList.setAdapter(lmAdapter);
+//
+//        //        РС„РѕСЂРјР°С†РёСЏ Рѕ РїРѕСЃР»РµРґРЅРµРј СЂРµРјРѕРЅС‚Рµ
+//        ListView lastRepairInfoList = (ListView) findViewById(R.id.lastRepairInfo);
+//        final String[] lastRepairInfo = getResources().getStringArray(R.array.last_repair_info);
+//        ArrayAdapter<String> lrAdapter = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_list_item_1, lastRepairInfo);
+//        lastRepairInfoList.setAdapter(lrAdapter);
+//
+////        РРЅС„РѕСЂРјР°С†РёСЏ Рѕ Р·Р°С‚СЂР°С‚Р°С…
+//        ListView spendingInfoList = (ListView) findViewById(R.id.spendingInfo);
+//        final String[] spendingInfo = getResources().getStringArray(R.array.main_spending);
+//        ArrayAdapter<String> spendingAdapter = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_list_item_1, spendingInfo);
+//        spendingInfoList.setAdapter(spendingAdapter);
+    //    }
+    public void fillDate(){
+        TextView vehicleModel = (TextView) findViewById(R.id.tvVehicleModel);
+        vehicleModel.setText("РњРѕРґРµР»СЊ: " + vehicle.getBrand() + " " + vehicle.getModel());
+        TextView vehicleGraduationYear = (TextView) findViewById(R.id.tvVehicleGraduationYear);
+        vehicleGraduationYear.setText("Р“РѕРґ РІС‹РїСѓСЃРєР°: " + vehicle.getGraduationYear());
+        TextView vehicleMileage = (TextView) findViewById(R.id.tvMileage);
+        vehicleMileage.setText("РџСЂРѕР±РµРі: " + vehicle.getMileage());
+        TextView vehicleBody = (TextView) findViewById(R.id.tvBody);
+        vehicleBody.setText("РљСѓР·РѕРІ: " + vehicle.getBody());
+        TextView vehicleColor = (TextView) findViewById(R.id.tvColor);
+        vehicleColor.setText("Р¦РІРµС‚: " + vehicle.getColor());
+        TextView vehicleEngine = (TextView) findViewById(R.id.tvEngine);
+        vehicleEngine.setText("Р”РІРёРіР°С‚РµР»СЊ: " + vehicle.getEngine());
     }
 }

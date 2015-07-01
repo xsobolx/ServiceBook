@@ -78,9 +78,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editColor"/>
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/save"
-            android:id="@+id/button_add_new_vehicle" android:layout_gravity="center_horizontal"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:id="@+id/button_add_new_vehicle_cancel" android:layout_gravity="start"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:id="@+id/button_add_new_vehicle" android:layout_gravity="end"/>
+    </LinearLayout>
+
 </LinearLayout>

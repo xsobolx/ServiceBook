@@ -11,31 +11,113 @@
         <GridLayout
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" android:rowCount="8" android:columnCount="3" android:id="@+id/vehicalCard">
+                android:layout_height="wrap_content" android:rowCount="19" android:columnCount="3" android:id="@+id/vehicalCard">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                       android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/vehicle_info"
-                      android:id="@+id/textView" android:layout_gravity="center_horizontal"/>
-            <ListView
-                    android:layout_width="wrap_content"
-                    android:layout_height="325dp"
-                    android:id="@+id/vehicle_info"/>
-            <ListView
-                    android:layout_width="wrap_content"
-                    android:layout_height="195dp"
-                    android:id="@+id/lastMaintenanceInfo"/>
-            <ListView
-                    android:layout_width="match_parent"
-                    android:layout_height="195dp"
-                    android:id="@+id/lastRepairInfo"/>
-            <ListView
-                    android:layout_width="match_parent"
-                    android:layout_height="325dp"
-                    android:id="@+id/spendingInfo"/>
+                      android:id="@+id/vehicle_card_header" android:layout_gravity="center_horizontal" android:layout_row="0"
+                      android:layout_column="0"/>
 
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Цвет"
+                    android:id="@+id/tvColor" android:layout_row="6" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Модель"
+                    android:id="@+id/tvVehicleModel" android:layout_row="1" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Год выпуска"
+                    android:id="@+id/tvVehicleGraduationYear" android:layout_row="2" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Пробег"
+                    android:id="@+id/tvMileage" android:layout_row="3" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Кузов"
+                    android:id="@+id/tvBody" android:layout_row="4" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Двигатель"
+                    android:id="@+id/tvEngine" android:layout_row="5" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Дата последнего ТО"
+                    android:id="@+id/tvLastMaintenanceHeader" android:layout_row="7" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25.02.1994, 100км"
+                    android:id="@+id/tvMaintenanceDate" android:layout_row="8" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Следующее ТО через: 4634км"
+                    android:id="@+id/tvNextMaintenance" android:layout_row="9" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Последний ремонт"
+                    android:id="@+id/tvLastRepairHeader" android:layout_row="10" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="25.04.1995, 112000км"
+                    android:id="@+id/tvLastRepair" android:layout_row="11" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Основные затраты"
+                    android:id="@+id/tvSpendingHeader" android:layout_row="13" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Топливо: 7000руб."
+                    android:id="@+id/tvFuel" android:layout_row="14" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Расходники: 5000руб."
+                    android:id="@+id/tvRash" android:layout_row="15" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Итого: 80000руб."
+                    android:id="@+id/tvAllSpending" android:layout_row="17" android:layout_column="0"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Ремонт: 5000руб."
+                    android:id="@+id/tvRepairCoast" android:layout_row="16" android:layout_column="0"/>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:layout_gravity="center_horizontal">
+                    android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+                    android:layout_row="18" android:layout_column="0">
                 <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
