@@ -48,6 +48,7 @@ public class VehicleCard extends Activity implements View.OnClickListener {
         switch (v.getId()){
             case R.id.btn_all_maintenance:
                 Intent intent = new Intent(this, AllMaintenance.class);
+                intent.putExtra("KEY1", vehicle);
                 startActivity(intent);
                 break;
             case R.id.btn_all_repairs:

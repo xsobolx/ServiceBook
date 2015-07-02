@@ -23,6 +23,7 @@
     <string name="engine">Двигатель</string>
     <string name="save">Сохранить</string>
     <string name="cancel">Отменить</string>
+    <string name="add">Добавить</string>
 
     <string-array name="sort_array">
         <item>Пробегу</item>

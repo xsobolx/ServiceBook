@@ -16,9 +16,6 @@ public class MainActivity extends Activity implements OnClickListener{
     private VehicleList vehicleList;
     private VehicleAdapter adapter;
     private ListView lvVehicles;
-    Vehicle vehicle = new Vehicle();
-    Vehicle vehicle1 = new Vehicle();
-    Vehicle vehicle2 = new Vehicle();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,27 +48,6 @@ public class MainActivity extends Activity implements OnClickListener{
     public void addListenerOnSpinnerItemSelection(){
         spinner = (Spinner) findViewById(R.id.sortSpinner);
         spinner.setOnItemSelectedListener(new CustomOnItemSelectedListener());
-    }
-
-    public void addVehicles(){
-        vehicle.setBrand("VAZ");
-        vehicle.setModel("110");
-        vehicle.setGraduationYear("1995");
-        vehicle.setMileage(124987);
-
-        vehicle1.setBrand("VAZ");
-        vehicle1.setModel("2110");
-        vehicle1.setGraduationYear("1992");
-        vehicle1.setMileage(145676);
-
-        vehicle2.setBrand("VAZ");
-        vehicle2.setModel("2110");
-        vehicle2.setGraduationYear("1983");
-        vehicle2.setMileage(345987);
-
-        vehicleList.addVehicle(vehicle);
-        vehicleList.addVehicle(vehicle1);
-        vehicleList.addVehicle(vehicle2);
     }
 
     public void fillList(){
