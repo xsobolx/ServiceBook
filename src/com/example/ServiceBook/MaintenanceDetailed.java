@@ -14,10 +14,5 @@ public class MaintenanceDetailed extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.maintenance_deatailed);
 
-        ListView replaceList = (ListView) findViewById(R.id.replaceList);
-        final String[] replaced = getResources().getStringArray(R.array.replace_list);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, replaced);
-        replaceList.setAdapter(adapter);
     }
 }

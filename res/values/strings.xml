@@ -24,6 +24,8 @@
     <string name="save">Сохранить</string>
     <string name="cancel">Отменить</string>
     <string name="add">Добавить</string>
+    <string name="maintenance">Техническое обслуживание</string>
+    <string name="add_replacement">Добавить расходник</string>
 
     <string-array name="sort_array">
         <item>Пробегу</item>
